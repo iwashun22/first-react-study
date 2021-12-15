@@ -1,14 +1,22 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 
+// JSX Rules
+// return single element
+// div / section / article / Fragment
+// use camelCase for html attributes
+// className, not class
+// close every element
+
 function Greeting() {
    return (
-      <div>
-         <h1>Hello world</h1>
+      <React.Fragment>
+         <h1 className="greeting">Hello world</h1>
          <h2>This is my first lesson of React</h2>
-      </div>
+      </React.Fragment>
       // You can't put second element. Try to uncomment the code below and you will see the error.
       // <div></div>
+      // You should wrap the code by React Fragment so there will be not too many div in your code
    );
 }
 
