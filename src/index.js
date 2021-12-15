@@ -1,5 +1,5 @@
-import React from 'react';
-import ReactDom from 'react-dom';
+import React from "react";
+import ReactDom from "react-dom";
 
 // JSX Rules
 // return single element
@@ -9,28 +9,30 @@ import ReactDom from 'react-dom';
 // close every element
 
 function Greeting() {
-   return (
-      <React.Fragment>
-         <h1 className="greeting">Hello world</h1>
-         <h2>This is my first lesson of React</h2>
-      </React.Fragment>
-      // You can't put second element. Try to uncomment the code below and you will see the error.
-      // <div></div>
-      // You should wrap the code by React Fragment so there will be not too many div in your code
-   );
+  return (
+    <React.Fragment>
+      <h1 className="intro">Hello world</h1>
+      <Person />
+      <h2>This is my first lesson of React</h2>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa ipsam temporibus earum neque doloribus, eveniet quasi, cumque voluptatum ullam adipisci perferendis. Asperiores eos optio cumque fuga ducimus sed sequi doloremque!</p>
+    </React.Fragment>
+    // You can't put second element. Try to uncomment the code below and you will see the error.
+    // <div></div>
+    // You should wrap the code by React Fragment so there will be not too many div in your code
+  );
 }
 
-
-/////// same as the function above
+/////// this function is same as the function above
 // const Greeting = () => {
 //    return React.createElement(
-//       'div', null, 
+//       'div', null,
 //       React.createElement('h1', null, 'Hello world'),
 //       React.createElement('h2', null, 'This is my first lesson of React')
 //    );
 // }
 
-ReactDom.render(
-   <Greeting />
-   , document.getElementById('root')
-);
+function Person() {
+   return <h3>by Shun Iwashita</h3>
+}
+
+ReactDom.render(<Greeting />, document.getElementById("root"));
