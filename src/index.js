@@ -59,7 +59,7 @@ const Booklist = () => {
 
 const Book = () => {
    return (
-      <article class="book">
+      <article className="book">
          <Image />
          <Title />
          <Author />
@@ -67,7 +67,7 @@ const Book = () => {
    );
 }
 
-const Image = () => <img src="https://m.media-amazon.com/images/I/81YHHiNPDNL._AC_UL640_QL65_.jpg" href="book image" width="180px" class="bookimage"/>;
+const Image = () => <img src="https://m.media-amazon.com/images/I/81YHHiNPDNL._AC_UL640_QL65_.jpg" href="book image" width="180px" className="bookimage"/>;
 
 const Title = () => <h4>Tales of Life and Music</h4>;
 
