@@ -2,6 +2,7 @@ import React from "react";
 import ReactDom from "react-dom";
 
 // JSX Rules
+// The function name must start with capital letter
 // return single element
 // div / section / article / Fragment
 // use camelCase for html attributes
@@ -15,6 +16,8 @@ function Greeting() {
       <Person />
       <h2>This is my first lesson of React</h2>
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa ipsam temporibus earum neque doloribus, eveniet quasi, cumque voluptatum ullam adipisci perferendis. Asperiores eos optio cumque fuga ducimus sed sequi doloremque!</p>
+
+      <Booklist />
     </React.Fragment>
     // You can't put second element. Try to uncomment the code below and you will see the error.
     // <div></div>
@@ -34,5 +37,33 @@ function Greeting() {
 function Person() {
    return <h3>by Shun Iwashita</h3>
 }
+
+const Booklist = () => {
+   return (
+      <section>
+         <Book />
+         <Book />
+         <Book />
+         <Book />
+         <Book />
+      </section>
+   );
+}
+
+const Book = () => {
+   return (
+      <article>
+         <Image />
+         <Title />
+         <Author />
+      </article>
+   );
+}
+
+const Image = () => <img src="https://m.media-amazon.com/images/I/81YHHiNPDNL._AC_UL640_QL65_.jpg" href="book image" width="200px"/>;
+
+const Title = () => <h3>Tales of Life and Music</h3>;
+
+const Author = () => <p>Dave Grohl</p>;
 
 ReactDom.render(<Greeting />, document.getElementById("root"));
