@@ -1,6 +1,9 @@
 import React from "react";
 import ReactDom from "react-dom";
 
+// CSS
+import './index.css';
+
 // JSX Rules
 // The function name must start with capital letter
 // return single element
@@ -40,7 +43,11 @@ function Person() {
 
 const Booklist = () => {
    return (
-      <section>
+      <section className="booklist">
+         <Book />
+         <Book />
+         <Book />
+         <Book />
          <Book />
          <Book />
          <Book />
@@ -52,7 +59,7 @@ const Booklist = () => {
 
 const Book = () => {
    return (
-      <article>
+      <article class="book">
          <Image />
          <Title />
          <Author />
@@ -60,9 +67,9 @@ const Book = () => {
    );
 }
 
-const Image = () => <img src="https://m.media-amazon.com/images/I/81YHHiNPDNL._AC_UL640_QL65_.jpg" href="book image" width="200px"/>;
+const Image = () => <img src="https://m.media-amazon.com/images/I/81YHHiNPDNL._AC_UL640_QL65_.jpg" href="book image" width="180px" class="bookimage"/>;
 
-const Title = () => <h3>Tales of Life and Music</h3>;
+const Title = () => <h4>Tales of Life and Music</h4>;
 
 const Author = () => <p>Dave Grohl</p>;
 
