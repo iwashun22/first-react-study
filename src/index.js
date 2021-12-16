@@ -17,7 +17,13 @@ function Greeting() {
     <React.Fragment>
       <h1 className="intro">Hello world</h1>
       <Person />
-      <h2>This is my first lesson of React</h2>
+      {/* you can set the style by addign two curly braces */}
+      <h2 style={ {
+            padding: '10px 0',
+            fontFamily: `'Courier New', Courier, monospace`
+         } }>
+         This is my first lesson of React
+      </h2>
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa ipsam temporibus earum neque doloribus, eveniet quasi, cumque voluptatum ullam adipisci perferendis. Asperiores eos optio cumque fuga ducimus sed sequi doloremque!</p>
 
       <Booklist />
@@ -71,6 +77,6 @@ const Image = () => <img src="https://m.media-amazon.com/images/I/81YHHiNPDNL._A
 
 const Title = () => <h4>Tales of Life and Music</h4>;
 
-const Author = () => <p>Dave Grohl</p>;
+const Author = () => <p style={{ letterSpacing: "5px" }}>Dave Grohl</p>;
 
 ReactDom.render(<Greeting />, document.getElementById("root"));
