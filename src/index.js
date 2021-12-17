@@ -105,11 +105,12 @@ const Booklist = () => {
 // set the parameter for unique property
 const Book = props => {
    // console.log(props);
+   const { img, title, author } = props;
    return (
       <article className="book">
-         <Image img={props.img}/>
-         <Title title={props.title}/>
-         <Author author={props.author}/>
+         <Image img={img}/>
+         <Title title={title}/>
+         <Author author={author}/>
       </article>
    );
 }
