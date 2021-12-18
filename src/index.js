@@ -111,46 +111,20 @@ const Booklist = () => {
          title="Will"
          author="Will Smith"
        />
-       <Book
-         img="https://images-na.ssl-images-amazon.com/images/I/8144Vic9C5L._AC_UL127_SR127,127_.jpg"
-         title="I Love You to the Moon and Back"
-         author="Amelia Hepworth"
-       />
-       <Book
-         img="https://images-na.ssl-images-amazon.com/images/I/51Ua3JTN8iS._SX338_BO1,204,203,200_.jpg"
-         title="Big Shot Diary of a Wimpy Kid"
-         author="Jeff Kinney"
-       />
-       <Book
-         img="https://m.media-amazon.com/images/I/91S+nNHdHSL._AC_UY436_FMwebp_QL65_.jpg"
-         title="Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones"
-         author="James Clear"
-       />
-       <Book
-         img="https://m.media-amazon.com/images/I/51DZeZw7K0L.jpg"
-         title="Greenlight"
-         author="Matthew McConaughey"
-       />
-       <Book
-         img="https://images-na.ssl-images-amazon.com/images/I/41lpkXqV+PL._SX418_BO1,204,203,200_.jpg"
-         title="History of the World Map by Map"
-         author="DK"
-       />
-       <Book
-         img="https://images-na.ssl-images-amazon.com/images/I/51wSvLJG-rS._SX306_BO1,204,203,200_.jpg"
-         title="Astrophysics for People in a Hurry"
-         author="Neil deGrasse Tyson"
-       />
-       <Book
-         img="https://images-na.ssl-images-amazon.com/images/I/61DTOTemyDL._SX330_BO1,204,203,200_.jpg"
-         title="Underland: A Deep Time Journey"
-         author="Robert Macfarlane"
-       /> 
-       
-       This is very long code, so it will be better if I set the books in the array and iterate through it
+
+      ...
+
+       This is very long code, especially when you have a hundred of books, so it will be better if I set the books in the array and iterate through it
        */}
 
-       {/* This code is way shorter and  more efficient */}
+       {/* 
+         This code is way shorter and  more efficient.
+         In React, the array will get concatenate into one thing (ex. String)
+
+         const names = ['John', 'David'];
+
+         {name} ===> 'JohnDavid'
+      */}
        {books.map(book => <Book book={book}/>)} 
      </section>
    );
