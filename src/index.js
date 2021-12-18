@@ -135,7 +135,7 @@ const Booklist = () => {
 
          {names} ===> 'JohnDavid'
       */}
-       {books.map(book => <Book key={book.id} {...book}/>)} 
+       {books.map(book => <Book key={book.id} book={{...book}}/>)} 
      </section>
    );
 }
@@ -143,7 +143,7 @@ const Booklist = () => {
 // set the parameter for unique property
 const Book = props => {
    // console.log(props);
-   const { img, title, author } = props;
+   const { img, title, author } = props.book;
    return (
       <article className="book">
          <Image img={img}/>
