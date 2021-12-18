@@ -48,7 +48,7 @@ function Document() {
 // }
 
 function Person() {
-   return <h3>by Shun Iwashita</h3>
+   return <h3>by Shun</h3>
 }
 
 const Booklist = () => {
