@@ -1,5 +1,3 @@
-import React from 'react';
-
 // set the parameter for unique property
 const Book = (props) => {
   // console.log(props);
