@@ -119,7 +119,7 @@ const Booklist = () => {
 
        {/* 
          This code is way shorter and  more efficient.
-         In React, the array will get concatenate into one thing (ex. String)
+         In React, the string arrays will get concatenate into one string.
 
          const names = ['John', 'David'];
 
