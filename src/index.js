@@ -1,4 +1,3 @@
-import { logDOM } from "@testing-library/dom";
 import React from "react";
 import ReactDom from "react-dom";
 
