@@ -13,7 +13,7 @@ import './index.css';
 // className, not class
 // close every element
 
-function Greeting() {
+function Document() {
   return (
     <React.Fragment>
       <h1 className="intro">Hello world</h1>
@@ -51,4 +51,4 @@ function Person() {
    return <h3>by Shun Iwashita</h3>
 }
 
-ReactDom.render(<Greeting />, document.getElementById("root"));
+ReactDom.render(<Document />, document.getElementById("root"));
