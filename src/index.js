@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDom from "react-dom";
-import Booklist from "./Book";
+import books from "./books";
+import Book from "./Book";
 
 // CSS
 import './index.css';
@@ -30,7 +31,6 @@ function Document() {
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa ipsam temporibus earum neque doloribus, eveniet quasi, cumque voluptatum ullam adipisci perferendis. Asperiores eos optio cumque fuga ducimus sed sequi doloremque!</p>
 
       <Booklist /> 
-      {/* This component is from Book.js */}
     </React.Fragment>
     // You can't put second element. Try to uncomment the code below and you will see the error.
     // <div></div>
@@ -50,5 +50,40 @@ function Document() {
 function Person() {
    return <h3>by Shun Iwashita</h3>
 }
+
+const Booklist = () => {
+  return (
+    <section className="booklist">
+      {/* <Book
+         img="https://m.media-amazon.com/images/I/81YHHiNPDNL._AC_UL640_QL65_.jpg"
+         title="Tales of Life and Music"
+         author="Dave Grohl"
+       />
+       <Book
+         img="https://images-na.ssl-images-amazon.com/images/I/911cmGSgcvL._AC_UL381_SR381,381_.jpg"
+         title="Will"
+         author="Will Smith"
+       />
+
+      ...
+
+       This is very long code, especially when you have a hundred of books, so it will be better if I set the books in the array and iterate through it
+       */}
+
+      {/* 
+         This code is way shorter and  more efficient.
+         In React, the string arrays will get concatenate into one string.
+
+         const names = ['John', 'David'];
+
+         {names} ===> 'JohnDavid'
+      */}
+      {books.map((book) => (
+        <Book key={book.id} book={{ ...book }} />
+        // This component is from Book.js
+      ))}
+    </section>
+  );
+};
 
 ReactDom.render(<Document />, document.getElementById("root"));
