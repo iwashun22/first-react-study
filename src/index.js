@@ -123,7 +123,7 @@ const Booklist = () => {
 
          const names = ['John', 'David'];
 
-         {name} ===> 'JohnDavid'
+         {names} ===> 'JohnDavid'
       */}
        {books.map(book => <Book book={book}/>)} 
      </section>
